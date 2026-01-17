@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// Function declaration with a default argument (value 0)
-void displayInt(int num = 0) {
-    cout << "The number is: " << num << endl;
+void print_sum(int a, int b = 10, int c = 15){
+    cout<<"Sum: "<<a + b + c<<endl;
 }
 
 int main() {
-    displayInt(10); // Argument provided: outputs 10
-    displayInt();   // No argument provided: uses default 0
+
+    print_sum(5);
+    print_sum(5, 15);
+    print_sum(5, 20, 25);
+
     return 0;
 }
