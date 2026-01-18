@@ -1,9 +1,9 @@
 #include<iostream>
-#include<math.h>
+#include<cmath>
 using namespace std;
 
 double power(double m, int n){
-    pow(m,n);
+    return pow(m, n);
 }
 
 int main(){
@@ -25,7 +25,7 @@ int main(){
         n = 2;
     }
 
-    p = pow(m,n);
+    p = power(m,n);
 
     cout<<m<<" raised to "<<n<<": "<<p<<endl;
 
