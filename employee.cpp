@@ -44,20 +44,30 @@ class Female : public Employee{
     }
 };
 
+void setGender(){
+    char g;
+    cout<<"Gender(M/f): ";
+    cin>>g;
+
+    if(g=='M'){
+        Male m;
+        m.setData();
+        m.hours();
+        m.computePay();
+        m.getData();
+    } else if(g=='f'){
+        Female f;
+        f.setData();
+        f.computePay();
+        f.getData();
+    } else{
+        cout<<"Invalid!"<<endl;
+    }
+}
+
 int main(){
-    Male m;
-
-    m.setData();
-    m.hours();
-    m.computePay();
-    m.getData();
-
-    Female f;
-
-    f.setData();
-    f.computePay();
-    f.getData();
-
+    
+    setGender();
 
     return 0;
 }
