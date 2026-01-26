@@ -18,7 +18,7 @@ class Rupees{
     double getRs(){
         return rs;
     }
-    operator Paise();
+    Rupees(Paise);
 };
 
 class Paise{
@@ -36,13 +36,13 @@ class Paise{
     void _disp(){
         cout<<ps<<" paise"<<endl;
     }
-    operator Rupees(){
-        return Rupees(ps/100.0);
+    Paise(Rupees r){
+        ps = r.getRs()*100;
     }
 };
 
-Rupees::operator Paise(){
-    return Paise(rs*100);
+Rupees::Rupees(Paise p){
+    rs = p.getPs()/100;
 }
 
 int main(){
